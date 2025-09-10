@@ -1,0 +1,6 @@
+<form method="POST">
+  <select name="from">{% for r in routes %}<option>{{r}}</option>{% endfor %}</select>
+  <select name="to">{% for r in routes %}<option>{{r}}</option>{% endfor %}</select>
+  <button>Search Trains</button>
+  {% if error %}<p>{{ error }}</p>{% endif %}
+</form>

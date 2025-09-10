@@ -1,0 +1,9 @@
+<h3>Available Trains</h3>
+<ul>
+  {% for t in trains %}
+    <li>
+      {{ t.name }} ({{ t.number }}) — Dept: {{ t.departure_time }}, Arr: {{ t.arrival_time }}
+      <a href="{{ url_for('select', train_index=loop.index0) }}">Select</a>
+    </li>
+  {% endfor %}
+</ul>
